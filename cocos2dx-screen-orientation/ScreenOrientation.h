@@ -1,6 +1,7 @@
 #ifndef __SCREEN_ORIENTATION_H_
 #define __SCREEN_ORIENTATION_H_
 
+#include "cocos2d.h"
 #include <memory>
 #include <mutex>
 

@@ -2,9 +2,9 @@
  * Dummy class
  */
 
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM != CC_PLATFORM_IOS)
-
 #include "../ScreenOrientation.h"
+
+#if (CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID) && (CC_TARGET_PLATFORM != CC_PLATFORM_IOS)
 
 std::unique_ptr<ScreenOrientation> ScreenOrientation::m_instance;
 std::once_flag ScreenOrientation::m_onceFlag;
@@ -15,7 +15,6 @@ ScreenOrientation::ScreenOrientation()
 
 ScreenOrientation::~ScreenOrientation()
 {
-    m_instance = nullptr;
 }
 
 void ScreenOrientation::setOrientation(int requestedOrientation)
@@ -50,4 +49,4 @@ ScreenOrientation& ScreenOrientation::GetInstance()
     return *m_instance.get();
 }
 
-#endif // (CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM != CC_PLATFORM_IOS)
+#endif // (CC_TARGET_PLATFORM != CC_PLATFORM_ANDROID) && (CC_TARGET_PLATFORM != CC_PLATFORM_IOS)

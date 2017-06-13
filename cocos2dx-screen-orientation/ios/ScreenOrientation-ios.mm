@@ -1,5 +1,6 @@
-#if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 #import "../ScreenOrientation.h"
+
+#if CC_TARGET_PLATFORM == CC_PLATFORM_IOS
 
 USING_NS_CC;
 
@@ -11,8 +12,7 @@ ScreenOrientation::ScreenOrientation()
 }
 
 ScreenOrientation::~ScreenOrientation()
-{
-    m_instance = nullptr;
+{    
 }
 
 ScreenOrientation& ScreenOrientation::GetInstance()

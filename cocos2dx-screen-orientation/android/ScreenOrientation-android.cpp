@@ -1,5 +1,6 @@
-#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 #include "../ScreenOrientation.h"
+
+#if CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 #include "platform/android/jni/JniHelper.h"
 
 #define CLASS_NAME "org/cocos2dx/cpp/ScreenOrientation"
@@ -15,8 +16,7 @@ ScreenOrientation::ScreenOrientation()
 }
 
 ScreenOrientation::~ScreenOrientation()
-{
-    m_instance = nullptr;
+{    
 }
 
 ScreenOrientation& ScreenOrientation::GetInstance()
